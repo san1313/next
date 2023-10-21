@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(rgba(48, 48, 48) 20%, rgba(32, 32, 32) 80%, rgba(24, 24, 24) 100%) no-repeat fixed;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 5% auto;
+}
+
+.title-sub {
+  text-align: center;
+}
+
+.food {
+  margin: 2% auto;
+  width: 25%;
+  background: white;
+  color: black;
+  padding: 2.2%;
+  border-radius: 5px;
+}
+
+.navbar {
+  background: #f4f4f4;
+  padding: 2%;
+}
+
+.navbar a {
+  margin-right: 2%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cart-item {
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0;
+}
+
+.btn {
+  @apply font-bold w-6 h-6 mr-1 rounded;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
